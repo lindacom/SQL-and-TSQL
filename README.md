@@ -1,7 +1,7 @@
 CREATE AZURE SQL SERVER AND SQL DATABASE
 
-Create your resource group and single database using the Azure portal.
-=======================================================================
+Create resource group and single database 
+==========================================
 
 Login to the portal
 
@@ -41,14 +41,8 @@ Leave the rest of the values as default and select Review + Create at the bottom
 
 Review the final settings and select Create.
 
-
-
-
-
-
 Basics
--------
--------
+========
 Subscription
 Pay-As-You-Go
 
@@ -119,11 +113,17 @@ On the toolbar, select Execute to retrieve data
 query options
 -------------
 create table
+
 drop table 
+
 insert statement - used to add new rows of data to a table in the database.
+
 Select statement -  used to fetch the data from a database table which returns data in the form of result table
+
 update statement
+
 delete statement - used to delete the existing records from a table.
+
 Clauses - where (using comparison or logical operators like >, <, =, LIKE, NOT, etc.), like (using wildcards - The percent sign represents zero, one, or multiple characters. The underscore represents a single number or character. ), order by (ascending or descending), group by and distinct
 
 table join options
