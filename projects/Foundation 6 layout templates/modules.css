@@ -1,0 +1,138 @@
+/* Choose a web colour pallette from 
+https://coolors.co/cfdbd5-e8eddf-f5cb5c-242423-333533 and enter in css varialbes section for referencing in css code */
+
+/* CSS Variables */
+
+:root {
+  --primary: #ddd;
+  --dark: #333;
+  --light: #fff;
+  --shadow: 0 1px 5px rgba(104, 104, 104, 0.8);
+}
+
+/* ****************************************************************************
+BOOKS LIBRARY TOP CONTAINER - CAROUSEL
+**************************************************************************** */
+
+/* Top Container */
+.top-container {
+  display: grid;
+  grid-gap: 20px;
+  grid-template-areas:
+    'showcase showcase top-box-a'
+    'showcase showcase top-box-b';
+}
+
+/* Showcase */
+.showcase {
+  grid-area: showcase;
+  min-height: 400px;
+  background:#242423;
+  background-size: cover;
+  background-position: center;
+  padding: 3rem;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: center;
+  box-shadow: var(--shadow);
+}
+
+.showcase h1 {
+  font-size: 4rem;
+  margin-bottom: 0;
+  color: var(--light);
+}
+
+.showcase p {
+  font-size: 1.3rem;
+  margin-top: 0;
+  color: var(--light);
+}
+
+/* Top Box */
+.top-box {
+  background: #333533;
+  display: grid;
+  align-items: center;
+  justify-items: center;
+  box-shadow: var(--shadow);
+  padding: 1.5rem;
+}
+
+.top-box .price {
+  font-size: 2.5rem;
+}
+
+.top-box-a {
+  grid-area: top-box-a;
+}
+
+.top-box-b {
+  grid-area: top-box-b;
+}
+
+
+/* ****************************************************************************BOOKS LIBRARY  4 COLUMN CARD GRID **************************************************************************** */
+/* Boxes */
+.boxes {
+
+  display: grid;
+  grid-gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+
+}
+
+.box {
+
+  background: E8EDDF;
+  text-align: center;
+  padding: 1.5rem 2rem;
+  box-shadow: var(--shadow);
+position: relative;
+ overflow: hidden;
+
+}
+
+.box .button {
+position: absolute;
+right:    0;
+bottom:   0;
+}
+
+/* ****************************************************************************
+ORBIT SLIDESHOW
+**************************************************************************** */
+.panel-heading uppercase {
+background-color: #044d48;
+}
+
+.docs-example-orbit-slide {
+  padding: 2rem 4rem;
+  color: $white;
+
+  .orbit-slide:nth-of-type(1) & {
+    background: dodgerblue;
+  }
+
+  .orbit-slide:nth-of-type(2) & {
+    background: rebeccapurple;
+  }
+
+  .orbit-slide:nth-of-type(3) & {
+    background: darkgoldenrod;
+  }
+
+  .orbit-slide:nth-of-type(4) & {
+    background: lightseagreen;
+  }
+}
+
+
+}
+
+.float-center {
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+}
