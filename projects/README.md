@@ -17,3 +17,10 @@ https://www.webslesson.info/2020/02/instant-search-with-pagination-in-php-mysql-
 List and grid display
 
 https://codepen.io/ajaypatelaj/pen/zIBjJ
+
+Resources
+=========
+
+JSLocalSearch - Javascript file - a small and fast jQuery client-side filter plugin which can be used to filter and search a list of elements you provide. 
+
+https://www.jqueryscript.net/other/filter-search-list-local.html
