@@ -27,3 +27,15 @@ function ready() {
     buttonClicked.parentElement.parentElement.remove()
     
 }
+
+Check for a valid number or enter 1 by default
+-----------------------------------------------
+
+ if (isNaN(input.value) || input.value <= 0) {
+        input.value = 1
+    }
+    
+Format a number to two decimal places
+--------------------------------------
+
+total = Math.round(total * 100) / 100
