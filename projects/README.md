@@ -1,3 +1,12 @@
+How to
+=======
+Connect to a database in PHP
+-----------------------------
+
+$connect = mysqli_connect("database", "account", "password", "database table");
+
+
+
 Tutorials
 ==========
 
