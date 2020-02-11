@@ -30,64 +30,23 @@ $output .= '
 <a href="'.$row["url"].'?action=add&tag='.$row["tag"].'  " style="text-decoration : none; color : #000000;">
   
 <object data='.$row["image"].' width="100%"  class="group list-group-image">
-    <img src="http://placehold.it/400x250/000/fff" width="100%"/>
+    <img src="#" width="100%"/>
   </object>
    
   <h2><a href="#">'.$row["title"].'</a></h2>
-  <span class="product-card-desc">'.$row["precis"].'</span>
-  <span class="product-card-price">'.$row["price"].'</span><span class="product-card-sale">'.$row["price"].'</span></a>
-     <a href="http://lindacom.infinityfreeapp.com/books/store.php?action=get&title='.$row["title"].'&price='.$row["price"].'&quantity=1 "target="_blank" class="button"><i class="fa fa-shopping-cart"></i>Buy</a>
-   </div>
-
-
-
-
-
-   
- 
-
-
-
-
-
-
-
- 
-
-
-
   
- 
-          
-             
-
- 
-
- 
-
-
-
-
-
-
+  <span>'.$row["precis"].'</span>
   
+  <span>'.$row["price"].'</span><span>'.$row["price"].'</span></a>
+      
+   </div>   
 
-
- ';
+ '; 
       
-      
-      
-      
-      
- 
-
 }
 
 
  echo $output;
-
-
-
 
 }
 
@@ -100,7 +59,43 @@ else
 
 ?> 
 
+Use Ajax to display database query results from fetch.php file into div with the id result
+--------------------------------------------------------------------------------------------
 
+   <script>
+$(document).ready(function(){
+ load_data();
+
+ function load_data(query)
+ {
+  $.ajax({
+   url:"fetch.php",
+   method:"POST",
+   data:{query:query},
+   success:function(data)
+   {
+    $('#result').html(data);
+   }
+  });
+ }
+ $('#search_text').keyup(function(){
+  var search = $(this).val();
+  if(search != '')
+  {
+   load_data(search);
+  }
+  else
+  {
+   load_data();
+  }
+ });
+ });
+    </script>
+
+Create hyperlink to add a row from database to a url on click
+-------------------------------------------------------------
+
+<a href="http://website.com?action=add&title='.$row["title"].' ">'.$row["title"].'</a>
 
 Tutorials
 ==========
