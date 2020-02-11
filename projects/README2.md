@@ -86,6 +86,6 @@ function addItemToCart(title, price, imageSrc) {
         </div>`
     cartRow.innerHTML = cartRowContents
     cartItems.append(cartRow)
-    cartRow.getElementsByClassName('button alert')[0].addEventListener('click', removeCartItem)
+    cartRow.getElementsByClassName('button alert')[0].addEventListener('click', removeCartItem) // adding the eventlistener here ensures remove button works after page has already loaded
     cartRow.getElementsByClassName('cart-quantity-input')[0].addEventListener('change', quantityChanged)
 }
