@@ -155,3 +155,10 @@ left (outer) join - all records in the products table and matching records in th
 right (outer) join - all records from the customer table and matching records from the orders table
 
 full (outer) join - all records with a match in either the orders table or the customer table
+
+Union
+-------
+
+SELECT description FROM BOOKCOMMENTS
+UNION ALL
+SELECT description FROM REVIEWS;
