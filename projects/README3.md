@@ -44,3 +44,8 @@ Statement examples
 
 SELECT MIN(price) AS SmallestPrice
 FROM BOOKS;
+
+SELECT * FROM CUSTOMER
+WHERE CustomerName LIKE 'a%';
+
+N.b. alternatively you can use ending with an a (LIKE '%a';), an or in any position (LIKE '%or%';), r in the second position (LIKE '_r%';), starts with a and at least three characters in length (LIKE 'a__%';), starts with a and ends with o (LIKE 'a%o';), does not start with an a (NOT LIKE 'a%';)
