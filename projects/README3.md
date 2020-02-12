@@ -128,3 +128,14 @@ inner join (relationship customer id)
  SELECT ORDERS.id, CUSTOMER.customerName, ORDERS.orderDate
 FROM ORDERS
 INNER JOIN CUSTOMER ON ORDERS.customerID=CUSTOMER.customerID
+
+uses
+----
+
+inner join - records with matching values in both orders and customer table
+
+left (outer) join - all records in the orders table and matching records in the customer table
+
+right (outer) join - all records from the customer table and matching records from the orders table
+
+full (outer) join - all records with a match in either the orders table or the customer table
