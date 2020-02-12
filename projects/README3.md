@@ -49,6 +49,12 @@ INSERT INTO ORDERS (id, customerId, orderDate)
 VALUES ('10308', '2', '1996-09-18'),
  ('10309', '37', '1996-09-19'),
  ('10310', '77', '1996-09-20');
+ 
+ N.b. you can insert data from one table to an existing table without affecting existing records as follows
+ 
+ INSERT INTO table2
+SELECT * FROM table1
+WHERE condition;
 
 Statement examples
 ==========
