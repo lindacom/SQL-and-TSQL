@@ -169,3 +169,11 @@ Group
 SELECT COUNT(id), category
 FROM BOOKS
 GROUP BY category;
+
+Having
+-----
+
+SELECT COUNT(likes), booktitle
+FROM REVIEWS
+GROUP BY booktitle
+HAVING COUNT(likes) > 5;
