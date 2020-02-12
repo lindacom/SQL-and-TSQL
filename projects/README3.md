@@ -84,3 +84,9 @@ containing the pattern es (LIKE '%es%';),
 any character followed by ondon (LIKE '_ondon';),
 
 any character in between l n and on  (LIKE 'L_n_on');
+
+Between
+-------
+
+SELECT * FROM BOOKS
+WHERE price BETWEEN 10 AND 20;
