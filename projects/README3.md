@@ -45,6 +45,11 @@ Insert into a table example
 INSERT INTO CUSTOMER (customerId, customerName, review)
 VALUES ('2', 'Tom', 'I am happy');
 
+INSERT INTO ORDERS (id, customerId, orderDate) 
+VALUES ('10308', '2', '1996-09-18'),
+ ('10309', '37', '1996-09-19'),
+ ('10310', '77', '1996-09-20');
+
 Statement examples
 ==========
 
