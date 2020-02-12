@@ -33,6 +33,12 @@ UPDATE Customers
 SET ContactName = 'Alfred Schmidt', City= 'Frankfurt'
 WHERE CustomerID = 1;
 
+Change a data type
+-----------------
+
+ALTER TABLE BOOKS
+ALTER COLUMN category varchar(255);
+
 Insert into a table example
 ==========================
 
