@@ -178,3 +178,12 @@ FROM REVIEWS
 GROUP BY booktitle
 HAVING COUNT(likes) > 5
 ORDER BY COUNT(likes) DESC;
+
+Select into
+-----------
+
+SELECT * INTO MYORDERS
+FROM ORDERS
+WHERE customerId = 2;
+
+N.b. to copy data from one table into another new table
