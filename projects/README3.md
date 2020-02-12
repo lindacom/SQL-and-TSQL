@@ -118,3 +118,13 @@ Give tables an alias example
 SELECT o.OrderID, o.OrderDate, c.CustomerName
 FROM Customers AS c, Orders AS o
 WHERE c.CustomerName="Around the Horn" AND c.CustomerID=o.CustomerID;
+
+JOIN
+====
+
+inner join (relationship customer id)
+---------------------------------------
+
+ SELECT ORDERS.id, CUSTOMER.customerName, ORDERS.orderDate
+FROM ORDERS
+INNER JOIN CUSTOMER ON ORDERS.customerID=CUSTOMER.customerID
