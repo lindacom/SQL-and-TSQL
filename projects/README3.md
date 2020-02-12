@@ -129,8 +129,16 @@ inner join (relationship customer id)
 FROM ORDERS
 INNER JOIN CUSTOMER ON ORDERS.customerID=CUSTOMER.customerID
 
-uses
-----
+Left join (relationship product id)
+------------------------------------
+
+SELECT PRODUCTS.productName, ORDERS.OrderId
+FROM PRODUCTS
+LEFT JOIN ORDERS ON PRODUCTS.productId = ORDERS.productId
+ORDER BY PRODUCTS.productName
+
+How to use joins
+-----------------
 
 inner join - records with matching values in both orders and customer table
 
