@@ -98,6 +98,11 @@ Combine four columns as one alias
 ---------------------------------
 
 SELECT CustomerName, Address + ', ' + PostalCode + ' ' + City + ', ' + Country AS Address
+FROM Customers; 
+
+or for mysql use
+
+SELECT CustomerName, CONCAT(Address,', ',PostalCode,', ',City,', ',Country) AS Address
 FROM Customers;
 
 N.b. SQL aliases are used to give a table, or a column in a table, a temporary name for the duration of the query.
