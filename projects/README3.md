@@ -162,3 +162,10 @@ Union
 SELECT description FROM BOOKCOMMENTS
 UNION ALL
 SELECT description FROM REVIEWS;
+
+Group
+-----
+
+SELECT COUNT(id), category
+FROM BOOKS
+GROUP BY category;
