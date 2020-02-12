@@ -137,6 +137,14 @@ FROM PRODUCTS
 LEFT JOIN ORDERS ON PRODUCTS.productId = ORDERS.productId
 ORDER BY PRODUCTS.productName
 
+Full join (relationship category id)
+-------------------------------------
+
+ SELECT BOOKS.categoryId, BOOKS.title, BOOKCATEGORY.id, BOOKCATEGORY.category
+FROM BOOKS
+FULL JOIN BOOKCATEGORY
+ON BOOKS.categoryId = BOOKCATEGORY.Id
+
 How to use joins
 -----------------
 
