@@ -13,6 +13,16 @@ CREATE TABLE Persons (
     PRIMARY KEY(PersonID)
 );
 
+Nb. you can use certain table constraints when creating a table such as primary key, foreign key, check, default
+
+FOREIGN KEY (PersonID) REFERENCES Persons(PersonID)
+
+ CHECK (Age>=18)
+ 
+ City varchar(255) DEFAULT 'London'
+ 
+ N.b. SQL server uses identity (e.g. int IDENTITY(1,1) PRIMARY KEY) instead of auto increment
+
 Alter a table examples
 -----------------------
 
