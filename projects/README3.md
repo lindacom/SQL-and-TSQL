@@ -26,6 +26,13 @@ Delete column
 ALTER TABLE Customers
 DROP COLUMN Email;
 
+Update a record where customerD is 1
+----------------
+
+UPDATE Customers
+SET ContactName = 'Alfred Schmidt', City= 'Frankfurt'
+WHERE CustomerID = 1;
+
 Insert into a table example
 ==========================
 
