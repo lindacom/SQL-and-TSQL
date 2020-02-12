@@ -26,7 +26,7 @@ Delete column
 ALTER TABLE Customers
 DROP COLUMN Email;
 
-Update a record where customerD is 1
+Update a record 
 ----------------
 
 UPDATE Customers
@@ -38,3 +38,9 @@ Insert into a table example
 
 INSERT INTO CUSTOMER (customerId, customerName, review)
 VALUES ('2', 'Tom', 'I am happy');
+
+Statement examples
+==========
+
+SELECT MIN(price) AS SmallestPrice
+FROM BOOKS;
