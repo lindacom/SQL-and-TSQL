@@ -134,7 +134,7 @@ uses
 
 inner join - records with matching values in both orders and customer table
 
-left (outer) join - all records in the orders table and matching records in the customer table
+left (outer) join - all records in the products table and matching records in the orders table
 
 right (outer) join - all records from the customer table and matching records from the orders table
 
