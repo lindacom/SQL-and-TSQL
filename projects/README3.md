@@ -176,4 +176,5 @@ Having
 SELECT COUNT(likes), booktitle
 FROM REVIEWS
 GROUP BY booktitle
-HAVING COUNT(likes) > 5;
+HAVING COUNT(likes) > 5
+ORDER BY COUNT(likes) DESC;
