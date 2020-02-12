@@ -25,3 +25,9 @@ Delete column
 --------------
 ALTER TABLE Customers
 DROP COLUMN Email;
+
+Insert into a table example
+==========================
+
+INSERT INTO CUSTOMER (customerId, customerName, review)
+VALUES ('2', 'Tom', 'I am happy');
