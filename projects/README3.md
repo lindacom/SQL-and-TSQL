@@ -56,6 +56,19 @@ VALUES ('10308', '2', '1996-09-18'),
 SELECT * FROM table1
 WHERE condition;
 
+Delete a table
+===============
+
+delete table
+------------
+
+DROP TABLE Shippers;
+
+delete table data only
+----------------------
+
+TRUNCATE TABLE table_name;
+
 Statement examples
 ==========
 
