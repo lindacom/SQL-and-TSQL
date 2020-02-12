@@ -193,3 +193,14 @@ FROM ORDERS
 WHERE customerId = 2;
 
 N.b. to copy data from one table into another new table
+
+Case
+----
+
+SELECT orderId, quantity,
+CASE
+    WHEN Quantity > 5 THEN "This order qualifies for free delivery"
+    WHEN Quantity = 5 THEN "Order one more to qualify for free delivery"
+    ELSE "The delivery charge for under 6 items is £1.99"
+END AS QuantityText
+FROM ORDERS;
