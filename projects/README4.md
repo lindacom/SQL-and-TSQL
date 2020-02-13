@@ -29,3 +29,11 @@ BEGIN
 VALUES ('3', 'Tom', 'I am happy');
 END
 GO
+
+Queries
+========
+
+query to find tables with constraint settings
+----------------------------------------------
+
+Select * from information_schema.TABLE_CONSTRAINTS
