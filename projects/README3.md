@@ -49,22 +49,46 @@ Change a data type
 ALTER TABLE BOOKS
 ALTER COLUMN category varchar(255);
 
-Insert into a table example
+Insert into a table examples
 ==========================
 
+insert one record
+--------------------
 INSERT INTO CUSTOMER (customerId, customerName, review)
 VALUES ('2', 'Tom', 'I am happy');
 
+Insert multiple records
+-----------------------
 INSERT INTO ORDERS (id, customerId, orderDate) 
 VALUES ('10308', '2', '1996-09-18'),
  ('10309', '37', '1996-09-19'),
  ('10310', '77', '1996-09-20');
  
+ Insert data from one table to another
+ -------------------------------------
  N.b. you can insert data from one table to an existing table without affecting existing records as follows
  
  INSERT INTO table2
 SELECT * FROM table1
 WHERE condition;
+
+Insert query using parameters
+-----------------------------
+
+// prepare and bind
+
+$stmt = $connect->prepare("INSERT INTO tbl_customer (CustomerName, review) VALUES (?, ?)");       
+$stmt->bind_param("ss", $CustomerName, $review);
+
+// set parameters and execute
+
+$CustomerName = "Jake";
+$review = "hello";
+$stmt->execute();
+
+echo "Inserting a new row into table";
+
+$stmt->close();
 
 Delete a table
 ===============
