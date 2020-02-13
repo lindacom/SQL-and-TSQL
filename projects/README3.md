@@ -103,8 +103,11 @@ delete table data only
 
 TRUNCATE TABLE table_name;
 
-Statement examples
-==========
+Statements
+====================
+
+Select
+-------
 
 SELECT MIN(price) AS SmallestPrice
 FROM BOOKS;
@@ -151,6 +154,17 @@ WHERE price BETWEEN 10 AND 20;
 
 SELECT * FROM Orders
 WHERE OrderDate BETWEEN #01/07/1996# AND #31/07/1996#;
+
+random records
+---------------
+
+SELECT TOP 3 * FROM BOOKS
+   WHERE featured ='featured'
+
+  
+   order by newid()
+   
+    Nb. newid() is a function to return random results
 
 Combine four columns as one alias example
 ---------------------------------
