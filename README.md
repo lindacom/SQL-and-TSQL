@@ -148,5 +148,10 @@ Create stored procedures using Sql Server Management Studio
 
 Go to programmability > stored procedures folder
 
+Resources
+=========
+
+SQL server and TSQL tutorial - https://www.youtube.com/watch?v=SUcC4DZWwKY&list=PLWf6TEjiiuIDvJ4P5l7Bzrmpzv8hW9CAO&index=1
+
 
 
