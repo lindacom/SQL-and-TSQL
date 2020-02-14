@@ -1,3 +1,21 @@
+Declaring, setting and selecting variables
+===========================================
+
+A variable is in memory temporary storage. There are two types of variable - scalar (one value per variable) and table.
+
+1. Declare variable - define with an @ symbol and define the data type e.g. DECLARE @tom INT. N.b. It is possible to declare multiple variables at once.  The variables can be different data types.  Just separate them with a comma.
+2. Set the variable e.g. @tom = 5
+
+3. print the variable e.g. PRINT @tom or select the variable e.g. SELECT @tom
+
+Variables are only available in the current session. Using the GO command releases the variable (batch terminator).
+
+N.b. you cannot declare variables more than once without using GO.
+
+N.b. both SELECT (assign from a query) and SET (assign from a funtion or literal value) can be used for variable assignment.
+
+Variables can be overwritten.
+
 Stored procedures
 ==================
 
