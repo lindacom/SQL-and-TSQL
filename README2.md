@@ -57,3 +57,43 @@ WHERE customerid = customerid
 Now when you go to the table and change data the trigger is fired and will enter a system date in the Lastupdated column (as per the 
 instruction in the SET section of the trigger)
 
+Functions
+=========
+
+The functions folder is located in programmability > functions. There are various functions subfolders - table-valued, scalar-valued, aggregate, system. 
+
+Scalar-valued functions
+-----------------------
+
+1. Right click the folder and select create new
+2. Enter a name for the function and enter parameter. In the return step enter a data type e.g. INT
+In the BEGIN step enter a query N.b. you can right click the area and open query designer to build a query.
+
+Assemblies
+==========
+
+Used for linking .net application to TSQL for example.
+
+Creatae a DLL
+Create an assembly
+Create an SQL server CLR stored procedure from the assembly
+
+1. Enable CLR - enable CLR sp_configure 'clr enabled'; 1. Execute the command
+2. Create an assembly. Enter name and in the FROM step enter the location of the dll. Enter permission sets e.g. SAFE. Execute the assembly.
+3. Create a stored procedure. Enter a name and external name referencing the assembly, the class within the assembly and the method within the class. Execute the stored procedure.
+
+Types
+=====
+
+The types folder is located in programmability > types. There are various types - user defined data types
+
+Types are used for creating tables with column names using pre defined data types.
+
+1. Right click the folder to create a type
+2. Enter a name for the type. In the FROM step enter a data type e.g. Varchar
+
+Query store
+===========
+
+A query store shows the metrics for your queries.  You first need to enable query store.  You can then right click the query under the folder and view it.
+
