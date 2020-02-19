@@ -34,3 +34,30 @@ WHEN DATEADD(YY, DATEDIFF(YY, orderDate, GETDATE()), orderDate) > GETDATE()
 THEN DATEDIFF(YY, orderDate, GETDATE()) -1
 ELSE DATEDIFF(YY, orderDate, GETDATE())
 END
+
+Conversions
+============
+
+N.b. style parameter can't be used in cast you need to use convert
+
+CAST function
+----
+
+To convert date format in date of birth colum to a new format in a new converteddob column
+
+SELECT TOP (1000) 
+       [customerName]
+      ,[id]
+      ,[DateOfBirth],
+	  CAST(DateOfBirth as nvarchar) as ConvertedDOB
+  FROM [dbo].[CUSTOMER]
+
+Nb. you can also specify the length in brackets after the word nvarchar eg. (5) takes off five characters and will display Dec 3
+
+
+CONVERT function
+--------
+
+First select target date type (length is optional) then name of source column (style is optional and is for varchar or nvarchar only)
+
+See also date and time styles - https://docs.microsoft.com/en-us/sql/t-sql/functions/cast-and-convert-transact-sql?view=sql-server-ver15
