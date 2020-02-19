@@ -93,3 +93,22 @@ CROSS APPLY xt.XMLData.nodes('/Record/Number') AS n2(b)
 
 N.b. the cross apply gives the format for the query in the select section. It accesses the record tab and the number tag (which is within the record tag and contains record id and machine and start), and the number tag
 N.b. if a column name in the xml contains = you need to use the @ symbol in the select statement otherwise just type the column name
+
+Working with Json
+=================
+
+Import json file into SQL server
+---------------------------------
+
+DECLARE @employeedetails VARCHAR(MAX)
+
+SELECT @employeedetails -
+BulkColumn
+FROM OPENROWSET(BULK 'C:\users\pathtojsonfile.json', SINGLE_BLOB) JSON
+
+Select query
+------------
+
+to convert a date to json enter
+
+select getdate() as date for json path
