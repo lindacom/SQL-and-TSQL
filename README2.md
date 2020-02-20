@@ -2,6 +2,21 @@ Sql Server Management Studio (SSMS)
 ===================================
 An explanation of the folder structure in SSMS.
 
+Encrypt a table column
+=======================
+
+You may encrypt a column e.g. credit card details or password.
+
+In object explorer pane right click the database and select tasks > encrypt columns to open the wizard
+On the introduction page click next
+On the column selection screen select the table and column you want to encrypt. Choose an encryption type e.g. deterministic and click next
+On the master key configuration screen select key store provider e.g. windows certificate store and click next
+On the run settings screen select how you would like to proceed e.g. proceed to finish now and click next
+View the choices on the summary screen and click finish
+The results screen shows the status of the performing encryption operations task
+
+When the task has completed, in object explorer pane right click the table and select top 1000 rows.  You will see that the column data has now been encrypted
+
 Linked servers
 ==============
 
