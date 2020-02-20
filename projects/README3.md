@@ -266,6 +266,29 @@ CASE
 END AS QuantityText
 FROM ORDERS;
 
+Merge
+=====
+
+You can perform delete, update and insert all in one statement.  If you want to merge data from a source table into a target table use the fomular like follows
+
+MERGE StudentTarget AS T
+USING StudentSource AS S
+ON T.ID = S.ID
+WHEN MATCHED THEN
+UPDATE SET T.NAME = S.NAME
+WHEN NOT MATCHED BY TARGET THEN
+INSERT (ID, NAME) VALUES (S.ID, S.NAME)
+WHEN NOT MATCHED BY SOURCE THEN 
+DELETE
+
+N.b. the statement is mergin on the id field of both tables, 
+
+when the id matches then update the target table with data from the source table, 
+
+when the target table does not match then update the target table with data from the source table.
+
+When the target table contains an id that is not in the source table the data will be deleted.
+
 Date types
 ===========
 
