@@ -200,6 +200,9 @@ SELECT o.OrderID, o.OrderDate, c.CustomerName
 FROM Customers AS c, Orders AS o
 WHERE c.CustomerName="Around the Horn" AND c.CustomerID=o.CustomerID;
 
+TSQL
+=====
+
 JOIN
 ====
 
@@ -225,6 +228,18 @@ Full join (relationship category id)
 FROM BOOKS
 FULL JOIN BOOKCATEGORY
 ON BOOKS.categoryId = BOOKCATEGORY.Id
+
+N.b. mySQL does not recognise full join.  instead you can emulate this using the following
+
+SELECT books.categoryId, books.title, bookcategory.id, bookcategory.category
+FROM books
+LEFT JOIN bookcategory
+ON books.categoryId = bookcategory.id
+UNION
+SELECT books.categoryId, books.title, bookcategory.id, bookcategory.category
+FROM books
+RIGHT JOIN bookcategory
+ON books.categoryId = bookcategory.id
 
 How to use joins
 -----------------
