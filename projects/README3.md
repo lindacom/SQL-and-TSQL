@@ -1,6 +1,20 @@
 MySql
 ======
 
+echo database fields as checkbox list
+---------------------------------------
+
+  echo '
+        
+         <input type="checkbox" id="'.$row["lastname"].'" value="'.$row["lastname"].'">
+         <label for="'.$row["lastname"].'">'.$row["firstname"].' '.$row["lastname"].'</label><br>
+         
+        
+        
+        
+        
+        ';
+
 Create a table example
 -----------------------
 
