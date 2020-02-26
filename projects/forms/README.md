@@ -1,7 +1,7 @@
 Form action
 ===========
 
- action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>"
+<form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
   
 So, the $_SERVER["PHP_SELF"] sends the submitted form data to the page itself, instead of jumping to a different page. This way, the user will get error messages on the same page as the form.
 
