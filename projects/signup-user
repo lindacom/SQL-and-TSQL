@@ -1,0 +1,11 @@
+ <?php
+
+  if(isset($_POST['Signup']))
+{
+    $sql = "INSERT INTO tbl_customer (CustomerName, email, password)
+    VALUES ('".$_POST["txtsuuser"]."','".$_POST["txtsuemail"]."','".$_POST["txtsupassword"]."')";
+
+    $result = mysqli_query($connect,$sql);
+}
+echo 'Account created. Please log in.'
+?>  
