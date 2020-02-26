@@ -1,0 +1,28 @@
+ <?php
+session_start();
+?>
+
+<?php include 'dbConnect.php';?> 
+<?php include 'shoppingnav.php';?> 
+<?php include 'loginuser.php';?> 
+
+
+
+<form role="form" method='post' action="shoppinglogin.php" id="loginform">
+<label for="right-label" class="text-left"><strong>Username:</strong></label> </div> 
+ 
+ <div>
+    <input type="text" id="tbusername" name="txtuser" placeholder="Username*"required></div>  
+      
+
+<div>
+<label for="right-label" class="text-left"><strong>Password:</strong></label></div>
+                                           
+    <div>
+<input type="password" id="tbpassword" name="txtpass" placeholder="Password*"required></div>
+
+                                                                                                               
+  
+    <button class="button expanded" type="submit" name="Login" id="btn">Login</button>
+   
+     </form>    
