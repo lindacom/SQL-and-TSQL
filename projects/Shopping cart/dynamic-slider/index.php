@@ -48,3 +48,62 @@
 </div>
   <!--end of slider-->
                      </div> 
+  
+   <script>
+$(document).ready(function(){
+load_slides(1)
+load_slides2(1)
+load_slides3(1)
+
+    });
+    </script> 
+  
+<script>
+  // separately pulls in a dynamic slide based on records in db marked as featured and limited to first, second and third record
+    function load_slides(page, query = '')
+    {
+      $.ajax({
+        url:"fetchfeaturedslide.php",
+        method:"POST",
+        data:{page:page, query:query},
+        success:function(data)
+        {
+          $('#dynamic_slides').html(data);
+        }
+      });
+    }
+
+    function load_slides2(page, query = '')
+    {
+      $.ajax({
+        url:"fetchfeaturedslide2.php",
+        method:"POST",
+        data:{page:page, query:query},
+        success:function(data)
+        {
+          $('#dynamic_slides2').html(data);
+        }
+      });
+    }
+
+    function load_slides3(page, query = '')
+    {
+      $.ajax({
+        url:"fetchfeaturedslide3.php",
+        method:"POST",
+        data:{page:page, query:query},
+        success:function(data)
+        {
+          $('#dynamic_slides3').html(data);
+        }
+      });
+    }
+    </script> 
+    
+    <script>
+      $(document).foundation();  
+      
+      </script> 
+ 
+          </body>
+  </html>
