@@ -63,6 +63,10 @@ Change a data type
 ALTER TABLE BOOKS
 ALTER COLUMN category varchar(255);
 
+Rename a column
+-----------------
+sp_rename 'REVIEWS.product_id', 'productId', 'COLUMN';
+
 Insert into a table examples
 ==========================
 
