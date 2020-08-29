@@ -1,5 +1,5 @@
 MySql - how to
-======
+================
 
 echo database fields as checkbox list
 ---------------------------------------
