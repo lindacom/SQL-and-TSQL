@@ -1,6 +1,13 @@
 MySql - how to
 ================
 
+Foreign key - relationship in one table (foreign key) with id (primary key) in another table. Foreign key constraints should be set up to preserve the integrity of the data
+preventing user refering to a record that does not exist.
+
+alter table name add foreign key post_id references posts(id) on delete cascade - when record deleted all comments associated with the deleted post. N.b you can also set
+on update.
+
+alter table comments drop foreign key - remove foreign key constraint 
 
 Create a table example
 -----------------------
@@ -197,6 +204,8 @@ TSQL
 JOIN
 ====
 
+N.b. default JOIN type is inner join. Includes records that have a match in both tables.
+
 inner join (relationship customer id)
 ---------------------------------------
 
@@ -211,6 +220,11 @@ SELECT PRODUCTS.productName, ORDERS.OrderId
 FROM PRODUCTS
 LEFT JOIN ORDERS ON PRODUCTS.productId = ORDERS.productId
 ORDER BY PRODUCTS.productName
+
+Right join
+---------
+
+Fetch all records fro the right table even if there's no match.
 
 Full join (relationship category id)
 -------------------------------------
@@ -259,6 +273,7 @@ GROUP BY category;
 
 Having
 -----
+When working with column data that has been groupe you can no longer use where.  You need to use having insead
 
 SELECT COUNT(likes), booktitle
 FROM REVIEWS
