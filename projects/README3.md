@@ -1,4 +1,19 @@
-Declaring, setting and selecting variables
+
+echo database fields as checkbox list
+---------------------------------------
+
+  echo '
+        
+         <input type="checkbox" id="'.$row["lastname"].'" value="'.$row["lastname"].'">
+         <label for="'.$row["lastname"].'">'.$row["firstname"].' '.$row["lastname"].'</label><br>
+         
+        
+        
+        
+        
+        ';
+        
+        Declaring, setting and selecting variables
 ===========================================
 
 A variable is in memory temporary storage. There are two types of variable - scalar (one value per variable) and table.
