@@ -79,3 +79,5 @@ enter exec <storedprocedure name>
   You can give the role to a user account by going to the server - security > logins - right click and select new login.  Add the login name and password .  In the sample mapping menu select the database and select the role.  Click ok. 
   
   Roles relate to a database and are located in databae > security > roles. 
+  
+  N.b even if the user does not have access to view the database table they can still execute the stored procedure if they have permission
