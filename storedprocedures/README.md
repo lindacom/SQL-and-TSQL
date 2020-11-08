@@ -26,6 +26,19 @@ end
 
 N.b. use set nocount on; after the begin in the statement so that you dont return the number of rows affected as that is a duplicate of the result set.
 
+N.b. after the create statement you can enter parameters that can be passed in.  Parameters should start with an @ symbol and include type and maximum length. e.g. @FirstName varchar(50)
+
+```
+create procedure dbo.spPeople_GetByFirstName
+    @FirstName nvarchar(50)
+as
+begin
+  select id FirstName, LastName
+  from dbo.People
+  where FirstName = @FirstName;
+end
+```
+
 Run the stored procedure to save it
 
 Executing stored procedure
