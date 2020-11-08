@@ -55,6 +55,10 @@ Click execute to save the stored procedure.Nb if you make changes to the procedu
 N.b when adding more than one parameter seperate them with a comma.
 N.b to add a default value for a parameter set it e.g. @FirstName nvarchar(50) = ''
 
+Transactions
+------------
+If you want to enter a transaction in the stored procedure statemet it means the procedure needs to fully happen otherwise rollback. after the begin statement enter begin trans.
+
 Executing stored procedure
 --------------------------
 Enter the stored procedure name to execute it:
