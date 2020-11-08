@@ -70,3 +70,12 @@ enter exec <storedprocedure name>
   
   To run the procedure passing in one variable enter e.g exec dbo.spPeople_GetByFirstName 'Mary'
   To run the procedure passing in more than one variable  e.g first name and last name enter exec dbo.spPeople_GetByFirstName 'Mary' 'Black'
+  
+  Database > security > roles
+  ===========================
+  
+  You can create a role in a stored procedure e.g. create role dbStoredProcedureAccess. Click execute to create the role 
+  You can give permissions to a role e.g. grant execute to dbStoredProcedureAccess. Click execute to apply the permission
+  You can give the role to a user account by going to the server - security > logins - right click and select new login.  Add the login name and password .  In the sample mapping menu select the database and select the role.  Click ok. 
+  
+  Roles relate to a database and are located in databae > security > roles. 
