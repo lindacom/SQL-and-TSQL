@@ -23,3 +23,16 @@ begin
   from dbo.People
 end
 ```
+
+N.b. use set nocount on; after the begin in the statement so that you dont return the number of rows affected as that is a duplicate of the result set.
+
+Run the stored procedure to save it
+
+Executing stored procedure
+--------------------------
+Enter the stored procedure name to execute it:
+
+Right click the database ad select new query
+enter exec <storedprocedure name>
+  
+  N.b you may need to do ctrl + shift + r to refresh so that the system can find the stored procedure.
