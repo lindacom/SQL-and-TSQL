@@ -1,5 +1,8 @@
-A stored procedure is a pre-compiled piece of code. Improves security as instead of adding queries to your code you can put query in stored procedure and reference the stored
-procedure in your code.
+Stored procedures
+=====================
+A stored procedure is a pre-compiled piece of code. 
+Improves security as instead of adding queries to your code you can put query in stored procedure and reference the stored procedure in your code. This prevents injection attack.
+Stored procedures are clearly defined and generally faster than running a select statement.
 
 Create stored procedure in Sql Server
 =======================================
