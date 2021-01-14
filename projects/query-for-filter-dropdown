@@ -1,0 +1,10 @@
+<?php  
+//query for category filter dropdown
+$connect = mysqli_connect("host", "user", "password", "database");
+ $query = "
+SELECT category
+FROM books
+GROUP BY category
+";
+$result =  mysqli_query($connect, $query);
+?>
