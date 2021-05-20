@@ -81,7 +81,7 @@ classes/mysql includes and implements the database interface
 public function connect($username ="", $password = "", $host = "localhost", $dbname = "PHPDatabase", $options = [])
     {
      
-   $db = new PDO("sqlsrv:Server={$host};Database={$dbname}", $username, $password);
+   $this->db = new PDO("sqlsrv:Server={$host};Database={$dbname}", $username, $password);
     }
 ```
 
