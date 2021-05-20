@@ -1,13 +1,11 @@
 var express = require('express');
 var app = express();
 
-var execPHP = require('./ExecPHP.js')();
+var execPHP = require('./execphp.js')();
 
-///execPHP.phpFolder = 'C:\\Users\\cex\\Desktop\\npmphpproject\\';
-execPHP.phpFolder = 'C:\\Users\\cex\\Desktop\\nodephpoopmvc_dev\\';
+execPHP.phpFolder = 'C:\\Users\\cex\\Desktop\\oopphpcarttsql\\';
 
- // app.use('*.php',function(request,response,next) {
-    app.use('/',function(request,response,next) {
+app.use('*.php',function(request,response,next) {
 	execPHP.parseFile(request.originalUrl,function(phpResult) {
 		response.write(phpResult);
 		response.end();
