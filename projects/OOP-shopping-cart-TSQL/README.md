@@ -54,6 +54,46 @@ executes the command line PHP and calls the passed callback with the result. N.b
 
 3. php files - all the application files.
 
+Create database class
+----------------------
+
+1. interfaces/DB.php
+2. dbConnect.php
+3. classes/mySql.php
+
+DB connect:
+
+```
+<?php
+// an interface specifies what methods a class should implement
+
+interface DB
+{
+    public function connect($host, $username = '', $password);
+    public function query($query);
+}
+?>
+```
+
+classes/mysql includes and implements the database interface
+
+```
+public function connect($username ="", $password = "", $host = "localhost", $dbname = "PHPDatabase", $options = [])
+    {
+     
+   $db = new PDO("sqlsrv:Server={$host};Database={$dbname}", $username, $password);
+    }
+```
+
+dbconnect:
+```
+<?php 
+
+$database = $database = new Mysql();
+$database->connect($username ="", $password = "", $host = "localhost", $dbname = "PHPDatabase", $options = []);
+?>
+```
+
 Run the application
 =====================
 
