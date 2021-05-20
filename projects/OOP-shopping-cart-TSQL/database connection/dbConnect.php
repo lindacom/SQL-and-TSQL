@@ -1,5 +1,5 @@
 <?php 
 
 $database = $database = new Mysql();
-$database->connect($username ="laravel", $password = "laravellaravel1", $host = "localhost", $dbname = "PHPDatabase", $options = []);
+$database->connect($username ="", $password = "", $host = "localhost", $dbname = "PHPDatabase", $options = []);
 ?>
