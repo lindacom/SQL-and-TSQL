@@ -1,5 +1,9 @@
 Create local sql server instance
 --------------------------
+In start menu open sqlcmd.
+To create a database in the commandline enter:
+
+CREATE DATABASE LaravelDatabase GO
 
 Create tables
 ---------------
