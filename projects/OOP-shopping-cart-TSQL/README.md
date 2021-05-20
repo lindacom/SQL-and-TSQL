@@ -21,19 +21,21 @@ NPM for PHP projects
 Create a node project
 ===========================
 
-1. Open visual studio code. Open a terminal and navigate to the required directory (e.g desktop)
+1. Open visual studio code. Open a terminal and navigate to the required directory (e.g cd desktop)
 2. Make a new directory using the command mkdir <directoryname>
 
-On your computer:
+If you havent already done so on your computer:
 4. download node js from nodejs.org
-5. install PHP (if you haven’t already).Just follow the standard instructions on http://php.net/manual/en/install.php.
+5. install PHP (if you haven’t already). Follow the standard instructions on http://php.net/manual/en/install.php.
 
-In the commandline:
-4. navigate into the directory you just created and enter the command npm init. When prompted you can enter package name, description entery point - index.js or press
-enter to accept the default.  When prompted is it ok click yes.
+In the terminal:
+4. navigate into the directory you just created (cd <directoryname>)and enter the command npm init. 
+  When prompted you can enter package name, description entery point - index.js or press enter to accept the default.  
+  When prompted is it ok click yes.
 
 In visual studio code: 
-7. go to file > open folder and open the directory you have created. N.b. you will see a node modules directory has been created and a package.json file has been created
+7. go to file > open folder and open the directory you have created. 
+   N.b. you will see a node modules directory has been created and a package.json file has been created
 
 Add dependencies
 =================
@@ -44,18 +46,19 @@ In visual studio code open a terminal and install express - enter the command np
 
 Create files
 =============
-1. ebserver.js - web server. requires “execphp.js” which is where we will do the PHP parsing. 
+1. webserver.js - web server. requires “execphp.js” which is where PHP parsing takes place. 
 defining a route that recieves all *.php requests, and runs them through the execPHP class.
 
 2. execphp.js - this file contains a class, ExecPHP, with a single method, parseFile. This method basically takes a file, 
 executes the command line PHP and calls the passed callback with the result.
 
-3. php file
+3. php files - all the application files.
 
 Run the application
 =====================
 
-run the application - node --use_strict webserver.js
+In the terminal run the application by entering node --use_strict webserver.js
 open the browser to localhost port 3000 - http://localhost:3000/
+
 N.b. whenever you make a change to files you need to restart the server. server.js
 
