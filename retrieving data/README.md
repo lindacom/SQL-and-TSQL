@@ -20,3 +20,27 @@ e.g. select firstname + lastname from tablename;
 
 Alias
 ------
+To add a column name to the result use as (alias) e.g.
+select firstname + lastname as fullname from tablename;
+N.b. if you want to have a space in the alias name you need to put the alias in square brackets. 
+N.b works in objct names, table names etc but not data
+
+Order of calculation
+---------------------
+BODMAS is a pneumonic for the order in which calculations  are performed:
+
+Brackets
+Orders of - to the power of
+Division
+Multiplication
+Addition
+Subtract
+
+To specify order of calculation you can surround in brackets e.g.
+select product, price * (stock + order) as sales from dbo.products;
+
+N.b. in SSMS tools > options > text editor > all languages you can add line numbers next to code or turn off word wrap
+
+
+
+
