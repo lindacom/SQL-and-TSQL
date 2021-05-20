@@ -14,7 +14,7 @@ class Mysql implements DB
     public function connect($username ="", $password = "", $host = "localhost", $dbname = "PHPDatabase", $options = [])
     {
        // connection to sqlserver
-   $db = new PDO("sqlsrv:Server={$host};Database={$dbname}", $username, $password);
+   $this->db = new PDO("sqlsrv:Server={$host};Database={$dbname}", $username, $password);
     }
 
     public function query($query)
