@@ -2,6 +2,20 @@ Sql Server Management Studio (SSMS)
 ===================================
 An explanation of the folder structure in SSMS.
 
+SQL naming
+----------
+4 part fully qualified name
+
+sql server.db.schema.object
+
+1. sql server - only necessary if querying external server
+2. db - no need to specify either use dropdown in the toolbar to select database or the use statement on top of the code
+3. schema - dbo - grouping of objects eg tables. N.b. permissions are assigned to schemas rather than individual tables. 
+N.b in SSMS each user has a default schema
+4. object - table name
+
+N.b. it is therefore only necessary to use the two part name e.g. dbo.customertable
+
 Encrypt a table column
 =======================
 
