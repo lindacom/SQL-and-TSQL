@@ -50,7 +50,7 @@ Create files
 defining a route that recieves all *.php requests, and runs them through the execPHP class.
 
 2. execphp.js - this file contains a class, ExecPHP, with a single method, parseFile. This method basically takes a file, 
-executes the command line PHP and calls the passed callback with the result.
+executes the command line PHP and calls the passed callback with the result. N.b. php path refers to the location where the php installation is saved.
 
 3. php files - all the application files.
 
