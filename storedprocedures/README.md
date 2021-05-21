@@ -1,14 +1,97 @@
-Stored procedures
-=====================
-A stored procedure is a pre-compiled piece of code. 
-Improves security as instead of adding queries to your code you can put query in stored procedure and reference the stored procedure in your code. This prevents injection attack.
-Stored procedures are clearly defined and generally faster than running a select statement.
+views and Stored procedures
+==============================
+
+views - stores select views as if they were tables. e.g. database has personal information. Rather than chane the permissions on the table you can create a view that just shows information
+without the personal information. This:
+
+1. helps with security 
+2. hides compleity of statement that is being run
+3. is single point of change (when several queries are using the view)
+
+N.b. a stored procedure does not duplicate data  It is just a partial view.
+
+
+A stored procedure - is a pre-compiled piece of code. Similar to macro.  Group of statemets that you want to run as a single thing.
+
+1. Improves security as instead of adding queries to your code you can put query in stored procedure and reference the stored procedure in your code. This prevents injection attack.
+2. Stored procedures are clearly defined and generally faster than running a select statement.
+
+
+Create a view
+--------------
+
+```
+use Northwind;
+create view offinfo
+as select employeeID, name, officeadd, officePhone
+from eployees
+go
+
+```
+
+N.b. every column in the view has to have a name
+
+to access the view:
+
+```
+select * from dbo.offinfo
+```
+
+To modify the view ( e.g. to get extra select columns) use the alter statement
+
+```
+use Northwind;
+go
+alter view dbo.vNames
+as 
+select firstName + ' ' + lastName as fullName, city, country
+from dbo.employees;
+go
+
+select * from dbo.vNames
+```
+
+N.b. you cannt use order by with a view (unless using TOP) as the order cannot be specified in the createion of a view but can by the user of the view
+i.e. in the select all from view statement
+
+N.b. use go before and after the create/alter view statement
+
+
 
 Create stored procedure in Sql Server
 =======================================
 
-Go to database > programmability > stored procedures (expand the folder to see system stored procedures and other stored procedures)
-Right click stored procedures folder and select new > stored procedure
+1. Stored proceudres are saved in database > programmability > stored procedures (expand the folder to see system stored procedures and other stored procedures)
+2. to create a stored procedure Right click stored procedures folder and select new > stored procedure
+3. in the create statement enter a name for the stored procedure. N.b built in stored procedures start with sp_ so do not use this naming convention
+4. In the begin statement write the statement
+5. to run a stored procedure enter exec then the stored procedure name at the end of the file
+
+N.b. you can pass parameters (variables) to stored procedures. They are defined just before the add using the @ symbol followed by variable name followed by type
+
+e.g. @city varchar(20)
+
+```
+use Northwind;
+go 
+alter proc dbo.uspNames
+@city varchar(20)
+as
+begin
+select firstName, lastName
+from dbo.employees
+where city = @city;
+
+select companyName
+from dbo.suppliers
+where city = @city;
+end;
+go 
+
+exec dbo.uspNames @city = 'seattle'
+```
+
+
 
 Naming convention
 ------------------
