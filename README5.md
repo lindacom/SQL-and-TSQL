@@ -4,7 +4,7 @@ importing table from mysql to sql server
 in mysql:
 
 1. select table 
-2. go to export and in the format field select file type csv
+2. go to export and in the format field select file type csv for MS excel
 3. click go button
 
 in ssms:
