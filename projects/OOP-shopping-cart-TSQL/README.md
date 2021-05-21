@@ -54,6 +54,19 @@ executes the command line PHP and calls the passed callback with the result. N.b
 
 3. php files - all the application files.
 
+Fetch images from node server
+-----------------------------
+To display images in php files:
+
+The images, CSS files, JavaScript files, and other files that the client downloads from the server are known as static files. These static files can be fetched with the use of the express framework 
+
+```
+// Function to serve all static files
+// inside public directory.
+app.use(express.static('public'));  
+app.use('/images', express.static('images'));
+```
+
 Create database class
 ----------------------
 
