@@ -1,6 +1,6 @@
-insert - add ew rows
-update - modify xitin rows
-delete - remove rows
+1. insert - add new rows
+2. update - modify existing rows
+3. delete - remove rows
 
 Create a table
 -------------
