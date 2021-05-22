@@ -1,0 +1,39 @@
+```
+public function findOrders($connect)
+{
+
+    $query = $this->database->query("SELECT * FROM dbo.orders where cart like '%coaching%';");
+
+         $result = $query->fetchAll();
+         
+```
+
+<h2>Wildcards</h2>
+<p>search for a book in cart containing the word 'coaching' using like</p>
+
+```
+<?php 
+// send object to showAll method
+$orders->findOrders($database);
+
+echo '<table>';
+echo '<tr>';
+echo '<th>orderdetails</th>';
+
+echo '<th>price</th>';
+echo '<th>total</th>';
+echo '</tr>';
+
+// loop through allproducts array
+foreach($orders->findOrders($database) as $keys => $values) {
+  echo '<tr>';
+   echo '<td>' .$values['cart']. '</td>';
+   echo '<td>' .$values['price']. '</td>';
+   echo '<td>' .$values['total']. '</td>';
+   echo '</tr>';
+}
+
+echo '</table>';
+?>
+</p>
+```
