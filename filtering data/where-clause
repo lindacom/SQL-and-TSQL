@@ -1,0 +1,49 @@
+database query
+------------------
+
+```
+public function showAll($connect)
+{
+
+    $query = $this->database->query("SELECT * FROM dbo.orders where email = 'linda@linda.com'");
+
+         $result = $query->fetchAll();
+```
+
+
+
+display results
+----------
+
+```
+<p>Find orders by customer email</p>
+<p>
+<?php
+
+// create new object
+$orders = new Filterdata($database);
+
+// send object to showAll method
+$orders->showAll($database);
+
+echo '<table>';
+echo '<tr>';
+echo '<th>orderdetails</th>';
+
+echo '<th>price</th>';
+echo '<th>total</th>';
+echo '</tr>';
+
+// loop through allproducts array
+foreach($orders->showAll($database) as $keys => $values) {
+  echo '<tr>';
+   echo '<td>' .$values['orderdetails']. '</td>';
+   echo '<td>' .$values['price']. '</td>';
+   echo '<td>' .$values['total']. '</td>';
+   echo '</tr>';
+}
+
+echo '</table>';
+?>
+</p>
+```
