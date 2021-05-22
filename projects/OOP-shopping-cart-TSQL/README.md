@@ -108,6 +108,94 @@ $database->connect($username ="", $password = "", $host = "localhost", $dbname =
 ?>
 ```
 
+Create database query classes
+-------------------------------
+
+```
+<?php 
+ini_set('display_errors', '1');
+ini_set('display_startup_errors', '1');
+error_reporting(E_ALL);
+?> 
+
+<?php
+// this class uses mysql class which implemnts DB interface.
+
+include ('Mysql.php');
+?>
+
+<?php
+
+class Retrievedata {
+    // retrieve data from the customers table tbl_customer
+
+    private $database = null;
+
+    private $products;
+
+    public $ProductID;
+    public $Title;
+    public $Category;
+    public $Price;
+
+      
+    // CONSTRUCTOR
+
+         function __construct(DB $database)
+        {
+
+            $this->database = $database;
+        // call to function
+        $this->showAll($database);
+
+        } 
+
+
+// DISPLAYS ALL CUSTOMERS
+
+public function showAll($connect)
+{
+
+    $query = $this->database->query("SELECT CustomerName + ' ' + email as title FROM dbo.tbl_customer");
+
+         $result = $query->fetchAll();
+
+ if($result == 0) { 
+    echo "There are no customers to display"; 
+    } else { 
+        while ($result > 0) { 
+            return $result; 
+
+              }
+
+  } 
+  } 
+
+
+}
+?>
+```
+
+Display database query results in php file
+----------------------------------------
+
+```
+<?php
+
+
+$acustomer = new Retrievedata($database);
+
+$acustomer->showAll($database);
+
+// loop through allproducts array
+foreach($acustomer->showAll($database) as $keys => $values) {
+  
+   echo '<td>' .$values["title"]. '</td>';
+}
+
+?>
+```
+
 Run the application
 =====================
 
