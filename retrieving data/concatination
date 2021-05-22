@@ -1,0 +1,24 @@
+Concatination
+==============
+
+```
+$query = $this->database->query("SELECT CustomerName + ' ' + email as title FROM dbo.tbl_customer");
+
+```
+
+```
+<?php
+
+
+$acustomer = new Retrievedata($database);
+
+$acustomer->showAll($database);
+
+// loop through allproducts array
+foreach($acustomer->showAll($database) as $keys => $values) {
+  
+   echo '<td>' .$values["title"]. '</td>';
+}
+
+?>
+```
