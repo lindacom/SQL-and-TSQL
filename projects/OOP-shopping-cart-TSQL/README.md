@@ -56,9 +56,10 @@ executes the command line PHP and calls the passed callback with the result. N.b
 
 Fetch images from node server
 -----------------------------
-To display images in php files:
+To display images in php files add the following to the server file (express):
 
-The images, CSS files, JavaScript files, and other files that the client downloads from the server are known as static files. These static files can be fetched with the use of the express framework 
+The images, CSS files, JavaScript files, and other files that the client downloads from the server are known as static files. 
+These static files can be fetched with the use of the express framework 
 
 ```
 // Function to serve all static files
