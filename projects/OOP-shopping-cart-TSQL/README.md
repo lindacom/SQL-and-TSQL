@@ -54,6 +54,17 @@ executes the command line PHP and calls the passed callback with the result. N.b
 
 3. php files - all the application files.
 
+- http://localhost:3000/index.php
+
+TSQL queries:
+
+- http://localhost:3000/queries/retrievedata.php
+- http://localhost:3000/queries/filterdata.php
+
+Shopping cart:
+
+- http://localhost:3000/products.php
+
 Fetch images from node server
 -----------------------------
 To display images in php files add the following to the server file (express):
